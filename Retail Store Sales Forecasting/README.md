@@ -46,5 +46,20 @@ pandas / numpy / matplotlib / seaborn
 scikit-learn (HalvingRandomSearchCV, metrics)
 xgboost / catboost / lightgbm
 ```
-etail_Store_Sales_Forecasting.ipynb in Jupyter or Google Colab
+
+## Usage
+
+```bash
+git clone https://github.com/username/retail-sales-forecasting
+cd retail-sales-forecasting
+pip install -r requirements.txt
+# Open Retail_Store_Sales_Forecasting.ipynb in Jupyter or Google Colab
 ```
+
+## What I Learned
+
+- Why random train/test split breaks time series models (data leakage through lags)
+- How lag features and rolling averages help the model capture sales dynamics
+- The difference between `bagging_temperature` and `subsample` in CatBoost
+- Why `early_stopping` doesn't work inside cross-validation and how to handle it
+- How `log1p` transformation affects metrics — need `expm1` before computing MAE/RMSE
