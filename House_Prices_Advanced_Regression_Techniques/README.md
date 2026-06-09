@@ -41,7 +41,7 @@ CatBoostRegressor(
 
 ## Top features
 
-![Feature Importance](feature_importance.png)
+![Feature Importance](Visualization/GradientBoostingRegressor_feature_importances.jpg)
 
 The most important ones turned out to be `GrLivArea`, `OverallQual`, `YearBuilt`, `GarageArea` and `TotalBsmtSF` — which makes a lot of sense intuitively.
 
