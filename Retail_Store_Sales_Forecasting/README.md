@@ -35,7 +35,7 @@ Trained and compared three gradient boosting models:
 |---|---|---|---|---|
 | XGBoost | 0.557 | 30 941 | 44 104 | 66.2% |
 | CatBoost | 0.558 | 30 801 | 43 600 | 66.8% |
-| LightGBM | — | — | — | — |
+| LightGBM | 0.556 | 30928 | 44060 | 66.5% |
 
 Also tuned CatBoost hyperparameters using `HalvingRandomSearchCV`.
 
@@ -46,20 +46,3 @@ pandas / numpy / matplotlib / seaborn
 scikit-learn (HalvingRandomSearchCV, metrics)
 xgboost / catboost / lightgbm
 ```
-
-## Usage
-
-```bash
-git clone https://github.com/username/retail-sales-forecasting
-cd retail-sales-forecasting
-pip install -r requirements.txt
-# Open Retail_Store_Sales_Forecasting.ipynb in Jupyter or Google Colab
-```
-
-## What I Learned
-
-- Why random train/test split breaks time series models (data leakage through lags)
-- How lag features and rolling averages help the model capture sales dynamics
-- The difference between `bagging_temperature` and `subsample` in CatBoost
-- Why `early_stopping` doesn't work inside cross-validation and how to handle it
-- How `log1p` transformation affects metrics — need `expm1` before computing MAE/RMSE
